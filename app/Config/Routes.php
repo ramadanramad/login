@@ -18,3 +18,7 @@ $routes->post('/login', 'Login::authenticate', ['filter' => 'guestFilter']);
 $routes->get('/logout', 'Login::logout', ['filter' => 'authFilter']);
 $routes->get('/dashboard', 'Dashboard::index', ['filter' => 'authFilter']);
 
+$routes->get('/dashboard/exportPdf', 'Dashboard::exportPdf', ['filter' => 'authFilter']);
+$routes->get('/dashboard/exportExcel', 'Dashboard::exportExcel', ['filter' => 'authFilter']);
+
+
